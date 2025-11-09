@@ -30,7 +30,7 @@ const userService = {
             if(file){
                 console.log(file);
                 file.path = file.path.replace(/\\/g, "/");
-                const profile_pic = 'http://localhost:3000/' + file.path;
+                const profile_pic = 'https://backendteaching-production.up.railway.app/' + file.path;
 
                 await prisma.user.update({
                     where: { email: data.email },

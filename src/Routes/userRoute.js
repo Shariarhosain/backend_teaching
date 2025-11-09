@@ -3,6 +3,9 @@ import  userController from '../Controllers/userController.js';
 
 import verifyMiddleware from '../middleware/verify.js';
 import  upload from '../middleware/multer.js';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 const router = express.Router();
 
@@ -24,3 +27,4 @@ router.get('/profile', userController.getUserProfile);
 
 
 export default router;
+
