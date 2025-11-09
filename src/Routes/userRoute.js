@@ -13,9 +13,10 @@ router.post('/login', userController.loginUser);
 router.post('/create', upload.single('pic'), userController.createUser);
 
 
-router.use(verifyMiddleware);
 
 router.get('/getall', userController.getUser);
+router.use(verifyMiddleware);
+
 router.put('/:email', userController.updateUser);
 router.delete('/:email', userController.deleteUser);
 
